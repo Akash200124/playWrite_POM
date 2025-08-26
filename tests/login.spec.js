@@ -3,7 +3,7 @@ import LoginPage from "../pages/loginpage.js"
 import path from 'path';
 
 
-test.skip('test_loginpage', async ({ page }) => {
+test('test_loginpage', async ({ page }) => {
 
     const Login = new LoginPage(page);
     await Login.GotoUrl('https://the-internet.herokuapp.com/login');
@@ -11,7 +11,7 @@ test.skip('test_loginpage', async ({ page }) => {
 
 });
 
-test.skip("locator_learning", async ({ page }) => {
+test("locator_learning", async ({ page }) => {
 
     await page.goto("https://saucedemo.com")
     await page.pause();
@@ -33,7 +33,7 @@ test.skip("locator_learning", async ({ page }) => {
 
 })
 
-test.skip("assertion", async ({ page }) => {
+test("assertion", async ({ page }) => {
 
     await page.goto('https://testautomationpractice.blogspot.com/');
 
@@ -74,7 +74,7 @@ test.skip("assertion", async ({ page }) => {
 
 })
 
-test.skip("handle alert", async ({ page }) => {
+test("handle alert", async ({ page }) => {
 
 
     page.once('dialog', dialog => {
@@ -124,7 +124,7 @@ test.skip("handle alert", async ({ page }) => {
 
 })
 
-test.only("hadle keybord and mouse movement", async ({ page }) => {
+test("hadle keybord and mouse movement", async ({ page }) => {
 
 
     await page.goto("https://testautomationpractice.blogspot.com/");
