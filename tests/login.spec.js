@@ -33,46 +33,46 @@ test("locator_learning", async ({ page }) => {
 
 })
 
-test("assertion", async ({ page }) => {
+// test("assertion", async ({ page }) => {
 
-    await page.goto('https://testautomationpractice.blogspot.com/');
+//     await page.goto('https://testautomationpractice.blogspot.com/');
 
 
-    const element = await page.getByRole('link', { name: 'GUI Elements' });
-    // check element present 
-    await expect(element).toHaveCount(1);
+//     const element = await page.getByRole('link', { name: 'GUI Elements' });
+//     // check element present 
+//     await expect(element).toHaveCount(1);
 
-    if (await page.$('text=GUI Elements')) {
-        console.log("element present");
-    }
+//     if (await page.$('text=GUI Elements')) {
+//         console.log("element present");
+//     }
 
-    // element is visible or not 
-    await expect(element).toBeVisible();
-    // element is hidden or not 
-    await expect.soft(element).toBeHidden();
+//     // element is visible or not 
+//     await expect(element).toBeVisible();
+//     // element is hidden or not 
+//     await expect.soft(element).toBeHidden();
 
-    // element is enabled or not 
-    await expect.soft(element).toBeEnabled();
-    // element is disabled or not 
-    await expect.soft(element).toBeDisabled();
+//     // element is enabled or not 
+//     await expect.soft(element).toBeEnabled();
+//     // element is disabled or not 
+//     await expect.soft(element).toBeDisabled();
 
-    // check text is present or not 
-    await expect(element).toHaveText("GUI Elements");
-    await expect.soft(element).not.toHaveText("GUI Elements");
+//     // check text is present or not 
+//     await expect(element).toHaveText("GUI Elements");
+//     await expect.soft(element).not.toHaveText("GUI Elements");
 
-    // check attribute value 
-    await expect.soft(element).toHaveAttribute('class', '');
+//     // check attribute value 
+//     await expect.soft(element).toHaveAttribute('class', '');
 
-    // check page title and url 
+//     // check page title and url 
 
-    await expect.soft(page).toHaveTitle('Test Automation Practice');
-    await expect.soft(page).toHaveURL('https://testautomationpractice.blogspot.com/');
+//     await expect.soft(page).toHaveTitle('Test Automation Practice');
+//     await expect.soft(page).toHaveURL('https://testautomationpractice.blogspot.com/');
 
-    await page.pause();
-    // check the visual validation of the page 
-    await expect(page).toHaveScreenshot();
+//     await page.pause();
+//     // check the visual validation of the page 
+//     await expect(page).toHaveScreenshot();
 
-})
+// })
 
 test("handle alert", async ({ page }) => {
 
